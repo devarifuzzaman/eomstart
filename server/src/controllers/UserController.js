@@ -1,13 +1,14 @@
-import {
-	RegisterServices,
-} from "../services/UserServices.js";
+import {LoginServices, LogOutService, RegisterServices} from "../services/UserServices.js";
 
 
 export const register= async (req, res)=>{
 	let result= await RegisterServices(req);
-	res.status(200).json(result);
+	return res.json(result);
 }
-
+export const login= async (req, res)=>{
+	let result= await LoginServices(req,res);
+	return res.json(result);
+}
 
 // export const OtpVerification= async (req, res)=>{
 // 	let result= await OtpVerificationServices(req);
@@ -21,11 +22,10 @@ export const register= async (req, res)=>{
 
 // }
 
-export const LogOut= async (req, res)=>{
-	let cookieOption={expires:new Date(Date.now()-24*6060*1000), httpOnly:false}
-	res.cookie('token',"",cookieOption);
-	res.status(200).json({status:"success", message:"Logout Successful"});
-}
+export const logout = async (req, res) => {
+	let result = await LogOutService(req, res);
+	return res.json(result);
+};
 
 export const CreateProfile= async (req, res)=>{
 	let result= await SaveProfileServices(req);

@@ -12,7 +12,8 @@ import * as UserController from "../controllers/UserController.js";
 
 //Api route for users and accounts
 router.post('/register',UserController.register);
-
+router.post('/login',UserController.login);
+router.get('/logout',UserController.logout);
 
 
 

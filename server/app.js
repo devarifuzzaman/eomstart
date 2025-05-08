@@ -12,12 +12,12 @@ import {DATABASE, MAX_JSON_SIZE, URL_ENCODED,WEB_CACHE, REQUEST_LIMIT_NUMBER, RE
 const app = express();
 
 // Global Application Middleware
-app.use(cors());
+app.use(cors({credentials: true,origin:true}));
 app.use(express.json({limit:MAX_JSON_SIZE}));
 app.use(express.urlencoded({ extended: URL_ENCODED }));
 app.use(hpp());
-app.use(helmet());
 app.use(cookieParser());
+app.use(helmet());
 
 // Rate Limiter
 const limiter = rateLimit({windowMs:REQUEST_LIMIT_TIME,max:REQUEST_LIMIT_NUMBER})
@@ -34,7 +34,8 @@ const limiter = rateLimit({windowMs:REQUEST_LIMIT_TIME,max:REQUEST_LIMIT_NUMBER}
 
  //Web Caching
 app.set('etag',WEB_CACHE);
+
  // Set API Route
-app.use("/api/v1",router);
+app.use("/api",router);
 
 export default app;

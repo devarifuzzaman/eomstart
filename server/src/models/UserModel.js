@@ -6,7 +6,7 @@ const DataSchema = new mongoose.Schema({
 	firstName: {type: String},
 	lastName: {type: String},
 	phone: {type: String},
-	image: {type: String,default:'../assets/img/user.png'},
+	img: {type: String, default:'../assets/img/user.png'},
 },
 	{
 		timestamps: true,
