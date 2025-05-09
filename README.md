@@ -12,29 +12,24 @@ Certainly! Based on the available information from the GitHub repository [devari
 
 ```
 eomstart/
-├── .idea/          # IDE configuration files
 ├── client/         # Frontend application source code
 ├── server/         # Backend application source code
 ├── .gitattributes  # Git configuration attributes
 └── .gitignore      # Specifies intentionally untracked files to ignore
 ```
 
-### 1. `.idea/`
-
-* Contains configuration files for the development environment, likely for JetBrains IDEs like WebStorm or IntelliJ IDEA.
-
-### 2. `client/`
+### 1. `client/`
 
 * Houses the frontend source code of the application.
 * Predominantly written in JavaScript, with styling in CSS and SCSS.
 * Represents approximately 90.2% of the codebase in JavaScript, 5.8% in CSS, and 4.0% in SCSS.
 
-### 3. `server/`
+### 2. `server/`
 
 * Contains the backend source code.
 * While specific details are not provided, the use of JavaScript suggests a Node.js environment.
 
-### 4. `.gitattributes` and `.gitignore`
+### 3. `.gitattributes` and `.gitignore`
 
 * `.gitattributes`: Configures Git attributes for the repository.
 * `.gitignore`: Specifies files and directories for Git to ignore, such as `node_modules/`, build directories, and environment files.
@@ -99,7 +94,3 @@ No license information is provided in the repository. It's recommended to add an
 ## Contact
 
 For further information or queries, you can reach out to the repository owner via their GitHub profile: [devarifuzzaman](https://github.com/devarifuzzaman).
-
----
-
-*Note: This documentation is based on the available structure and information from the repository. For more detailed insights, additional documentation or code comments within the repository would be beneficial.*
